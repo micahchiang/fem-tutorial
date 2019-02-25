@@ -1,6 +1,6 @@
 {
   "presets": [
-    "react",
+    "@babel/react",
     [
       "env",
       {
@@ -10,5 +10,10 @@
       }
     ]
   ],
-  "plugins": ["transform-class-properties"]
+  "plugins": ["transform-class-properties"],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
 }
