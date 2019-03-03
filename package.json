@@ -9,7 +9,9 @@
     "format": "prettier --write \"src/**/*.{js,jsx,css,json} \" ",
     "format-check": "prettier --list-different \"src/**/*.{js,jsx,css,json} \" ",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build --public-url ./dist/ src/index.html",
+    "start": "npm run build && babel-node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -41,6 +41,8 @@
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@reach/router": "^1.2.1",
+    "babel-cli": "^6.26.0",
+    "express": "^4.16.4",
     "petfinder-client": "^0.0.3",
     "react": ">=16.3.0",
     "react-dom": "^16.4.2",

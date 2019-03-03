@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import { Router } from "@reach/router";
 import Loadable from "react-loadable";
 import NavBar from "./NavBar";
@@ -42,4 +41,4 @@ class App extends React.Component {
   }
 }
 
-render(<App />, document.getElementById("root"));
+export default App;
